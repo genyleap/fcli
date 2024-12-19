@@ -1,9 +1,9 @@
 # -------------------- PROJECT TEMPLATE INFO ---------------------------------------------
-#   Title   :                       Project Template
+#   Title   :                       FCLI
 #   Version :                       1.2.20
 #   Author  :                       Kambiz Asadzadeh (compez.eth)
 #   License :                       MIT
-#   Url     :                       https://github.com/genyleap/Project-Template
+#   Url     :                       https://github.com/genyleap/fcli
 #   Organization  :                 Genyleap
 # ----------------------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ include(FetchContent)
 
 # ------ PROJECT INFO ------
 # Options
-set(PROJECT_NAME "PT" CACHE STRING "Project Name.") #You can change "ProjectTemplate" with your project name.
+set(PROJECT_NAME "fcli" CACHE STRING "Project Name.") #You can change "ProjectTemplate" with your project name.
 set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "Project Target Name.")
 
 set(PROJECT_VERSION_MAJOR 1)
@@ -68,15 +68,15 @@ set(PROJECT_LANGUAGES CXX)
 set(PROJECT_USAGE_TYPE "application" CACHE STRING "Usage Type.")
 
 #Use these keys [stl, qt, qtwidget, qtquick]
-set(PROJECT_MAIN_TYPE "qtquick" CACHE STRING "Library System.")
+set(PROJECT_MAIN_TYPE "stl" CACHE STRING "Library System.")
 
-set(DEVELOPER_BUNDLE_IDENTIFIER com.kambizasadzadeh.app.${PROJECT_NAME} CACHE STRING "Developer Bundle Identifier.")
+set(DEVELOPER_BUNDLE_IDENTIFIER com.genyleap.app.${PROJECT_NAME} CACHE STRING "Developer Bundle Identifier.")
 
 #You can replace your project description with this string.
-set(PROJECT_DESCRIPTION "A concept mobile app UI/UX prototype based on Qt Quick technology." CACHE STRING "Project Description")
+set(PROJECT_DESCRIPTION "FCLI is a command-line interface (CLI) tool for interacting with the Farcaster API." CACHE STRING "Project Description")
 
 #Your project website address.
-set(PROJECT_HOMEPAGE_URL "https://kambizasadzadeh.com" CACHE STRING "Project URL.")
+set(PROJECT_HOMEPAGE_URL "https://genyleap.com" CACHE STRING "Project URL.")
 
 #Project pre-configuration system.
 configure_file(
@@ -381,9 +381,9 @@ if(GUI_APPLICATION AND PROJECT_MAIN_TYPE STREQUAL "qt" OR PROJECT_MAIN_TYPE STRE
         MACOSX_BUNDLE_GUI_IDENTIFIER ${DEVELOPER_BUNDLE_IDENTIFIER}
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-        MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/properties/${PLATFORM_FOLDER}/Info.plist.in"
-        MACOSX_BUNDLE TRUE
-        WIN32_EXECUTABLE TRUE
+        # MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/properties/${PLATFORM_FOLDER}/Info.plist.in"
+        # MACOSX_BUNDLE TRUE
+        # WIN32_EXECUTABLE TRUE
     )
 
 if(ANDROID)
@@ -442,9 +442,9 @@ else()
         MACOSX_BUNDLE_GUI_IDENTIFIER ${DEVELOPER_BUNDLE_IDENTIFIER}
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-        MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/properties/${PLATFORM_FOLDER}/Info.plist.in"
-        MACOSX_BUNDLE TRUE
-        WIN32_EXECUTABLE TRUE
+        # MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/properties/${PLATFORM_FOLDER}/Info.plist.in"
+        # MACOSX_BUNDLE TRUE
+        # WIN32_EXECUTABLE TRUE
     )
 
 endif()

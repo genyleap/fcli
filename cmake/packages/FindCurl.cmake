@@ -3,7 +3,7 @@ set(CURL_NAME "Curl")
 set(CURL_DESCRIPTION "A command-line tool used to transfer data from or to a server using various protocols such as HTTP, FTP, SMTP, etc. It is widely used in the development of web applications to test APIs or interact with web servers.")
 
 # Pakcage option.
-option(USE_CURL ${CURL_DESCRIPTION} FALSE)
+option(USE_CURL ${CURL_DESCRIPTION} ON)
 if (USE_CURL)
     add_definitions(-DUSE_CURL)
 endif()

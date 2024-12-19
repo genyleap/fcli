@@ -8,7 +8,7 @@ else()
 endif()
 
 # Pakcage option.
-option(USE_JSON ${JSON_DESCRIPTION} FALSE)
+option(USE_JSON ${JSON_DESCRIPTION} ON)
 if (USE_JSON)
     add_definitions(-DUSE_JSON)
     # Define the repository URL and tag for the Boost libraries
