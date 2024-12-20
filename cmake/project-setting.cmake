@@ -19,7 +19,7 @@ if (USE_FULL_QT_FEATURES)
 endif()
 
 # Include User Interface
-option(GUI_APPLICATION "Include User Interface" OFF)
+option(GUI_APPLICATION "Include User Interface" ON)
 if (GUI_APPLICATION)
   add_definitions(-DGUI_APPLICATION)
 endif()

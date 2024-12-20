@@ -119,7 +119,6 @@ using PackagedTask      = std::packaged_task<void(void)>;
 using MultiThreadVector = std::vector<std::thread>;
 using StringStream      = std::basic_stringstream<char>;
 using String            = std::string;
-using StringView        = std::string_view;
 using IfStreamer        = std::ifstream;
 using StringStream      = std::stringstream;
 
