@@ -33,6 +33,10 @@
 
 #Extra
 .DS_Store
+CMakeLists.txt.user
 
 # Final Output
-build/ProjectTemplate
+build/
+third-party/
+
+.cache
